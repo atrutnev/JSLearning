@@ -22,7 +22,7 @@ router.route('/').get(function(req,resp){
       function(){
         resp.json(getCalendar())
       },
-      5000);
+      1000);
 });
 
 function getCalendar(){

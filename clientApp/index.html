@@ -3,9 +3,38 @@
 <head>
 <meta charset="utf-8"/>
 <title>Календарь праздничных дней 2018</title>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<!-- Include Required Prerequisites -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+ 
+<!-- Include Date Range Picker -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
 <script src="client.js"></script>
 </head>
 <body>
-    <h1>hello</h1>
+    <div class="gif">
+		<img src="loading5.gif">
+	</div>
+		<div class="calendar_dates">
+			<div class="form-group">
+				<label for="startDate">Start date</label>
+				<input type="text" class="form-control" id="startDate" name="startDate" placeholder="Date" required>
+			</div>
+			<div class="form-group">
+				<label for="endDate">End date</label>
+				<input type="text" class="form-control" id="endDate" name="endDate" placeholder="Date" required>
+			</div>
+			<div class="form-group">
+				<button type="button" class="btn btn-primary range_button" onclick="buildUserRange()">Apply</button>
+			</div>
+		</div>
+		
+		<div class="calendar_table"></div>
 </body>
 </html>
